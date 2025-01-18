@@ -5,12 +5,12 @@ let gameover = new Audio("gameover.mp3");
 
 let turn = "X";
 let isgameover = false;
-// fn to change turn
+
 
 const changeTurn = () => {
     return turn == "X" ? "0" : "X";
 }
-//function to check win
+
 const checkwin = () => {
     let boxtexts = document.getElementsByClassName('box-text');
     let wins = [
@@ -34,7 +34,7 @@ const checkwin = () => {
 
     });
 }
-//game logic
+
 document.body.addEventListener("click", function () {
     music.play();
 });
