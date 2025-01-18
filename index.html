@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+
+    <style>
+        .gamecontainer {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: repeat(3, 10vw);
+            grid-template-columns: repeat(3, 10vw);
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+        }
+
+        .box {
+            border: 2px solid black;
+            font-size: 8vw;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:hover {
+            background-color: rgb(250, 221, 230);
+        }
+
+        .info {
+            font-size: 22px;
+        }
+
+        .gameinfo {
+            padding: 0 34px;
+            font-family: 'Baloo Bhaina 2', cursive;
+        }
+
+        .gameinfo h1 {
+            font-size: 2.5rem;
+        }
+
+        .imgbox img {
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        .br-0 {
+            border-right: 0;
+        }
+
+        .bl-0 {
+            border-left: 0;
+        }
+
+        .bt-0 {
+            border-top: 0;
+        }
+
+        .bb-0 {
+            border-bottom: 0;
+        }
+
+        #reset {
+            margin: 0 23px;
+            padding: 1px 18px;
+            background: #f3e7f9;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Baloo Bhaina 2';
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .line {
+            background-color: black;
+            height: 3px;
+            width: 0;
+            position: absolute;
+            background-color: #911d91;
+            transition: width 1s ease-in-out;
+        }
+
+        @media screen and (max-width: 950px) {
+            .gamecontainer {
+                flex-wrap: wrap;
+            }
+
+            .gameinfo {
+                margin-top: 34px;
+            }
+
+            .gameinfo h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                grid-template-rows: repeat(3, 20vw);
+                grid-template-columns: repeat(3, 20vw);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid">
+            <a class="navbar-brand mb-0 h1" href="#">
+                <img src="logo.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Tic Tac Toe
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="gamecontainer">
+        <div class="container">
+            <div class="box bt-0 bl-0"><span class="box-text"></span></div>
+            <div class="box bt-0"><span class="box-text"></span></div>
+            <div class="box bt-0 br-0"><span class="box-text"></span></div>
+            <div class="box bl-0"><span class="box-text"></span></div>
+            <div class="box"><span class="box-text"></span></div>
+            <div class="box br-0"><span class="box-text"></span></div>
+            <div class="box bl-0 bb-0"><span class="box-text"></span></div>
+            <div class="box bb-0"><span class="box-text"></span></div>
+            <div class="box bb-0 br-0"><span class="box-text"></span></div>
+        </div>
+
+        <div class="gameinfo">
+            <h1>Welcome to Tic Tac Toe</h1>
+
+            <div>
+                <span class="info"> </span>
+                <button id="reset">Reset</button>
+
+            </div>
+            <div class="imgbox">
+                <img src="celeb.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
