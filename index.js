@@ -35,7 +35,9 @@ const checkwin = () => {
     });
 }
 //game logic
-music.play();
+document.body.addEventListener("click", function () {
+    music.play();
+});
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((element => {
     let boxtexts = element.querySelector('.box-text');
